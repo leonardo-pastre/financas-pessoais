@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 800px;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+.totalizadores {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalizador {
+    width: 240px;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+}
+
+.totalizador span {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: .8;
+}
+
+.totalizador div {
+    font-size: 28px;
+    font-weight: bolder;
+    margin-top: 12px;
+}
+
+#btn-novo-lancamento {
+    padding: 8px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lista-lancamentos {
+    width: 100%;
+    /* border: 1px solid #DDD; */
+    border-collapse: collapse;
+}
+
+.lista-lancamentos th,
+.lista-lancamentos td {
+    padding: 4px 0;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+    /* border: 1px solid #DDD; */
+    border-collapse: collapse;
+}
+
+.lista-lancamentos tr th:nth-child(1),
+.lista-lancamentos tr td:nth-child(1) {
+    width: 45%;
+}
+
+.lista-lancamentos tr th:nth-child(2),
+.lista-lancamentos tr td:nth-child(2) {
+    width: 20%;
+}
+
+.lista-lancamentos tr th:nth-child(3),
+.lista-lancamentos tr td:nth-child(3) {
+    width: 15%;
+}
+
+.lista-lancamentos tr th:nth-child(4),
+.lista-lancamentos tr td:nth-child(4) {
+    width: 20%;
+    text-align: center;
+}
+
+.lista-lancamentos th {
+    text-transform: capitalize;
+}
+
+.lista-lancamentos td {
+    font-size: 14px;
+}
+
+.btn-acao {
+    padding: 4px 8px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lista-lancamentos .btn-editar {
+    background-color: green;
+}
+
+.lista-lancamentos .btn-excluir {
+    background-color: red;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-lancamento {
+    width: 400px;
+    padding: 30px;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.modal-lancamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-lancamento form input,
+.modal-lancamento form select {
+    padding: 6px;
+    border: 1px solid #BBB;
+    border-radius: 4px;
+    outline: none;
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+}
+
+#btn-cancelar-modal {
+    padding: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-confirmar-modal {
+    padding: 8px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.show-modal {
+    display: flex;
+}

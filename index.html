@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Finanças Pessoais</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Finanças Pessoais</h1>
+        </header>
+        <div class="totalizadores">    
+            <div class="totalizador">
+                <span>receitas</span>
+                <div>R$ 3000,00</div>
+            </div>    
+            <div class="totalizador">
+                <span>despesas</span>
+                <div>R$ 2200,00</div>
+            </div>
+            <div class="totalizador">
+                <span>saldo</span>
+                <div>R$ 1200,00</div>
+            </div>
+        </div>        
+        <div>
+            <button id="btn-novo-lancamento">Novo lançamento</button>
+        </div>        
+        <table class="lista-lancamentos">
+            <tr>
+                <th>descrição</th>
+                <th>tipo</th>
+                <th>valor</th>
+                <th>ações</th>
+            </tr>
+            <tr>
+                <td>salário</td>
+                <td>receita</td>
+                <td>4000,00</td>
+                <td>
+                    <button class="btn-acao btn-editar">editar</button>
+                    <button class="btn-acao btn-excluir">excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>aluguel</td>
+                <td>despesa</td>
+                <td>1000,00</td>
+                <td>
+                    <button class="btn-acao btn-editar">editar</button>
+                    <button class="btn-acao btn-excluir">excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>transporte</td>
+                <td>despesa</td>
+                <td>200,00</td>
+                <td>
+                    <button class="btn-acao btn-editar">editar</button>
+                    <button class="btn-acao btn-excluir">excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>alimentação</td>
+                <td>despesa</td>
+                <td>500,00</td>
+                <td>
+                    <button class="btn-acao btn-editar">editar</button>
+                    <button class="btn-acao btn-excluir">excluir</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal-container">
+        <div class="modal-lancamento">
+            <form>
+                <input type="text" id="input-descricao" placeholder="Descrição">
+                <select id="select-tipo">
+                    <option value="receita">receita</option>
+                    <option value="despesa">despesa</option>
+                </select>
+                <input type="number" id="input-valor" placeholder="Valor">
+                <div class="buttons">
+                    <button id="btn-cancelar-modal">Cancelar</button>
+                    <button id="btn-confirmar-modal" type="submit">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
